@@ -9,13 +9,43 @@ public class PokemonAgua extends Pokemon {
 
 	@Override
 	public void atacar(Pokemon pokemonatacado) {
-		if (pokemonatacado instanceof PokemonPlanta) {
-			pokemonatacado.HealthPoint = pokemonatacado.HealthPoint - this.FuerzaDeAtaque*2;
-		} else if (pokemonatacado instanceof PokemonFuego) {
-			pokemonatacado.HealthPoint = (int) (pokemonatacado.HealthPoint - this.FuerzaDeAtaque*0.5);
-		} else if (pokemonatacado instanceof Pokemon) {
-			pokemonatacado.HealthPoint = pokemonatacado.HealthPoint - this.FuerzaDeAtaque;
-		}
+		if (PokemonContrincante instanceof PokemonPlanta) {
+            PokemonContrincante.HealthPoint = (int) (PokemonContrincante.HealthPoint - this.FuerzaDeAtaque * 0.5);
+        } else if (PokemonContrincante instanceof PokemonFuego) {
+            PokemonContrincante.HealthPoint = (int) (PokemonContrincante.HealthPoint - this.FuerzaDeAtaque * 2);
+        } else if (PokemonContrincante instanceof Pokemon) {
+            PokemonContrincante.HealthPoint = PokemonContrincante.HealthPoint - this.FuerzaDeAtaque;
+        } else if (PokemonContrincante instanceof PokemonAcero) {
+            PokemonContrincante.HealthPoint = PokemonContrincante.HealthPoint - this.FuerzaDeAtaque;
+        } else if (PokemonContrincante instanceof PokemonAgua) {
+            PokemonContrincante.HealthPoint = (int) (PokemonContrincante.HealthPoint - this.FuerzaDeAtaque * 0.5);
+        } else if (PokemonContrincante instanceof PokemonBicho) {
+            PokemonContrincante.HealthPoint = PokemonContrincante.HealthPoint - this.FuerzaDeAtaque;
+        } else if (PokemonContrincante instanceof PokemonDragon) {
+            PokemonContrincante.HealthPoint = (int) (PokemonContrincante.HealthPoint - this.FuerzaDeAtaque * 0.5);
+        } else if (PokemonContrincante instanceof PokemonElectrico) {
+            PokemonContrincante.HealthPoint = PokemonContrincante.HealthPoint - this.FuerzaDeAtaque;
+        } else if (PokemonContrincante instanceof PokemonFantasma) {
+            PokemonContrincante.HealthPoint = PokemonContrincante.HealthPoint - this.FuerzaDeAtaque; 
+        } else if (PokemonContrincante instanceof PokemonHada) {
+            PokemonContrincante.HealthPoint = PokemonContrincante.HealthPoint - this.FuerzaDeAtaque; 
+        } else if (PokemonContrincante instanceof PokemonHielo) {
+            PokemonContrincante.HealthPoint = PokemonContrincante.HealthPoint - this.FuerzaDeAtaque; 
+        } else if (PokemonContrincante instanceof PokemonLucha) {
+            PokemonContrincante.HealthPoint = PokemonContrincante.HealthPoint - this.FuerzaDeAtaque; 
+        } else if (PokemonContrincante instanceof PokemonPsiquico) {
+            PokemonContrincante.HealthPoint = PokemonContrincante.HealthPoint - this.FuerzaDeAtaque; 
+        } else if (PokemonContrincante instanceof PokemonRoca) {
+            PokemonContrincante.HealthPoint = (int) (PokemonContrincante.HealthPoint - this.FuerzaDeAtaque * 2);
+        } else if (PokemonContrincante instanceof PokemonSiniestro) {
+            PokemonContrincante.HealthPoint = PokemonContrincante.HealthPoint - this.FuerzaDeAtaque; 
+        } else if (PokemonContrincante instanceof PokemonTierra) {
+            PokemonContrincante.HealthPoint = (int) (PokemonContrincante.HealthPoint - this.FuerzaDeAtaque * 2);
+        } else if (PokemonContrincante instanceof PokemonVeneno) {
+            PokemonContrincante.HealthPoint = PokemonContrincante.HealthPoint - this.FuerzaDeAtaque; 
+        } else if (PokemonContrincante instanceof PokemonVolador) {
+            PokemonContrincante.HealthPoint = PokemonContrincante.HealthPoint - this.FuerzaDeAtaque; 
+        }
 	}
 	
 	
