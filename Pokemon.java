@@ -1,30 +1,46 @@
-package EjercicioPokemon;
+package Pokemon;
 
 public class Pokemon {
-	protected String Nombre;
-	protected int HealthPoint;
-	protected int FuerzaDeAtaque;
+	protected int idPokedex;
+	protected String nombre;
+	protected int healthPoint;
+	protected int fuerzaDeAtaque;
+	protected int defensa;
+	protected int velocidad;
+	protected int fuerzaDeAtaqueEspecial;
 	
-	public Pokemon(String isNombre, int iiHealthPoint, int iiFuerzaDeAtaque) {
-		Nombre = isNombre;
-		HealthPoint = iiHealthPoint;
-		FuerzaDeAtaque = iiFuerzaDeAtaque;
-	} // metodo constructor
+	public Pokemon(String nombre, int healthPoint, int fuerzaDeAtaque) {
+		this.nombre = nombre;
+		this.healthPoint = healthPoint;
+		this.fuerzaDeAtaque = fuerzaDeAtaque;
+	}
+
+	public Pokemon(int idPokedex, String nombre, int healthPoint, int fuerzaDeAtaque, int defensa, int velocidad, int fuerzaDeAtaqueEspecial) {
+		this.idPokedex = idPokedex;
+		this.nombre = nombre;
+		this.healthPoint = healthPoint;
+		this.fuerzaDeAtaque = fuerzaDeAtaque;
+		this.defensa = defensa;
+		this.velocidad = velocidad;
+		this.fuerzaDeAtaqueEspecial = fuerzaDeAtaqueEspecial;
+	}
+
+
 
 	public String getNombre() {
-		return Nombre;
+		return nombre;
 	}
 
 	public int getHealthPoint() {
-		return HealthPoint;
+		return healthPoint;
 	}
 
 	public int getFuerzaDeAtaque() {
-		return FuerzaDeAtaque;
+		return fuerzaDeAtaque;
 	}
 
 	public boolean isDead() {
-		if (HealthPoint <= 0) {
+		if (healthPoint <= 0) {
 			return true;	
 		}	
 		
@@ -32,14 +48,19 @@ public class Pokemon {
 	}
 	
 	public void atacar(Pokemon pokemonatacado) {
-		pokemonatacado.HealthPoint = pokemonatacado.HealthPoint - this.FuerzaDeAtaque;
+		pokemonatacado.healthPoint = pokemonatacado.healthPoint - this.fuerzaDeAtaque;
 		
 		
 	}
 
 	@Override
 	public String toString() {
-		return "Pokemon [Nombre=" + Nombre + ", HealthPoint=" + HealthPoint + ", FuerzaDeAtaque=" + FuerzaDeAtaque
+		if (this.healthPoint < 1) {
+			return "Pokemon [Nombre=" + nombre + ", HealthPoint=" + 0 + ", FuerzaDeAtaque=" + fuerzaDeAtaque
+					+ "]";
+		}
+		
+		return "Pokemon [Nombre=" + nombre + ", HealthPoint=" + healthPoint + ", FuerzaDeAtaque=" + fuerzaDeAtaque
 				+ "]";
 	}
 }
