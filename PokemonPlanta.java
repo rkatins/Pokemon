@@ -1,20 +1,22 @@
-package EjercicioPokemon;
+package Pokemon;
 
 public class PokemonPlanta extends Pokemon {
+	public PokemonPlanta(String nombre, int healthPoint, int fuerzaDeAtaque) {
+        super(nombre, healthPoint, fuerzaDeAtaque);
+    }
 
-	public PokemonPlanta(String isNombre, int iiHealthPoint, int iiFuerzaDeAtaque) {
-		super(isNombre, iiHealthPoint, iiFuerzaDeAtaque);
-		// TODO Auto-generated constructor stub
+	public PokemonPlanta(int idPokedex, String nombre, int healthPoint, int fuerzaDeAtaque, int defensa, int velocidad, int fuerzaDeAtaqueEspecial) {
+		super(idPokedex, nombre, healthPoint, fuerzaDeAtaque, defensa, velocidad, fuerzaDeAtaqueEspecial);
 	}
 
 	@Override
 	public void atacar(Pokemon pokemonatacado) {
 		if (pokemonatacado instanceof PokemonAgua) {
-			pokemonatacado.HealthPoint = pokemonatacado.HealthPoint - this.FuerzaDeAtaque*2;
+			pokemonatacado.healthPoint = pokemonatacado.healthPoint - this.fuerzaDeAtaque * 2;
 		} else if (pokemonatacado instanceof PokemonFuego) {
-			pokemonatacado.HealthPoint = (int) (pokemonatacado.HealthPoint - this.FuerzaDeAtaque*0.5);
+			pokemonatacado.healthPoint = (int) (pokemonatacado.healthPoint - this.fuerzaDeAtaque * 0.5);
 		} else if (pokemonatacado instanceof Pokemon) {
-			pokemonatacado.HealthPoint = pokemonatacado.HealthPoint - this.FuerzaDeAtaque;
+			pokemonatacado.healthPoint = pokemonatacado.healthPoint - this.fuerzaDeAtaque;
 		}
 	}
 	
