@@ -175,8 +175,6 @@ public class EjercicioPokemon {
 //		Combate1(PokemonFuego, PokemonPlanta);
 //		Combate2(PokemonAgua, Pokemon);
 		
-		System.out.println((int) (Math.random() * pokedex.size()));
-		
 		for (int i = 0; i < equipo.size(); i++) {
 			if (equipo.get(i).healthPoint > 0) {
 				Combate(equipo.get(i), pokedex.get((int) (Math.random() * pokedex.size() + 1)));
@@ -214,8 +212,9 @@ public class EjercicioPokemon {
 	
 	public static void Combate2(PokemonAgua PokemonAgua, Pokemon Pokemon) {
 		System.out.println(PokemonAgua.toString() + " VS " + Pokemon.toString());
+		System.out.println("\n");
+		
 		while (!PokemonAgua.isDead() && !Pokemon.isDead()) {
-			
 			PokemonAgua.atacar(Pokemon);
 			System.out.println(PokemonAgua.getNombre() + " ataca a " + Pokemon.getNombre());
 			System.out.println(PokemonAgua.toString() + " VS " + Pokemon.toString());
@@ -237,24 +236,47 @@ public class EjercicioPokemon {
 	public static void Combate(Pokemon equipoPokemon, Pokemon atacantePokemon) {
 		System.out.println(equipoPokemon.toString() + " VS " + atacantePokemon.toString());
 		System.out.println("\n");
+		
 		while (!equipoPokemon.isDead() && !atacantePokemon.isDead()) {
-			equipoPokemon.atacar(atacantePokemon);
-			System.out.println(equipoPokemon.getNombre() + " ataca a " + atacantePokemon.getNombre());
-			System.out.println(equipoPokemon.toString() + " VS " + atacantePokemon.toString());
-			System.out.println("\n");
-			
-			if (atacantePokemon.isDead()) {
-				System.out.println("Ha muerto " + atacantePokemon.getNombre());
+			if (equipoPokemon.velocidad >= atacantePokemon.velocidad) {
+				equipoPokemon.atacar(atacantePokemon);
+				System.out.println(equipoPokemon.getNombre() + " ataca a " + atacantePokemon.getNombre());
+				System.out.println(equipoPokemon.toString() + " VS " + atacantePokemon.toString());
 				System.out.println("\n");
+				
+				if (atacantePokemon.isDead()) {
+					System.out.println("Ha muerto " + atacantePokemon.getNombre());
+					System.out.println("\n");
+				} else {
+					atacantePokemon.atacar(equipoPokemon);
+					System.out.println(atacantePokemon.getNombre() + " ataca a " + equipoPokemon.getNombre());
+					System.out.println(equipoPokemon.toString() + " VS " + atacantePokemon.toString());
+					System.out.println("\n");
+					
+					if (equipoPokemon.isDead()) {
+						System.out.println("Ha muerto " + equipoPokemon.getNombre());
+						System.out.println("\n");
+					}
+				}
 			} else {
 				atacantePokemon.atacar(equipoPokemon);
 				System.out.println(atacantePokemon.getNombre() + " ataca a " + equipoPokemon.getNombre());
 				System.out.println(equipoPokemon.toString() + " VS " + atacantePokemon.toString());
 				System.out.println("\n");
 				
-				if (equipoPokemon.isDead()) {
+				if (atacantePokemon.isDead()) {
 					System.out.println("Ha muerto " + equipoPokemon.getNombre());
 					System.out.println("\n");
+				} else {
+					equipoPokemon.atacar(atacantePokemon);
+					System.out.println(equipoPokemon.getNombre() + " ataca a " + atacantePokemon.getNombre());
+					System.out.println(equipoPokemon.toString() + " VS " + atacantePokemon.toString());
+					System.out.println("\n");
+					
+					if (equipoPokemon.isDead()) {
+						System.out.println("Ha muerto " + atacantePokemon.getNombre());
+						System.out.println("\n");
+					}
 				}
 			}
 		}
