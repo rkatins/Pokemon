@@ -10,43 +10,43 @@ public class PokemonAcero extends Pokemon{
 	}
 
 	@Override
-	public void atacar(Pokemon PokemonAtacacado) {
-		if (PokemonAtacacado instanceof PokemonAcero) {
-			PokemonAtacacado.healthPoint = (int) (PokemonAtacacado.healthPoint - this.fuerzaDeAtaque * 0.5);
-        } else if (PokemonAtacacado instanceof PokemonAgua) {
-        	PokemonAtacacado.healthPoint = (int) (PokemonAtacacado.healthPoint - this.fuerzaDeAtaque * 0.5);
-        } else if (PokemonAtacacado instanceof PokemonBicho) {
-        	PokemonAtacacado.healthPoint = PokemonAtacacado.healthPoint - this.fuerzaDeAtaque;
-		} else if (PokemonAtacacado instanceof PokemonDragon) {
-			PokemonAtacacado.healthPoint = PokemonAtacacado.healthPoint - this.fuerzaDeAtaque;
-		} else if (PokemonAtacacado instanceof PokemonElectrico) {
-			PokemonAtacacado.healthPoint = (int) (PokemonAtacacado.healthPoint - this.fuerzaDeAtaque * 0.5);
-		} else if (PokemonAtacacado instanceof PokemonFantasma) {
-			PokemonAtacacado.healthPoint = PokemonAtacacado.healthPoint - this.fuerzaDeAtaque;
-		} else if (PokemonAtacacado instanceof PokemonFuego) {
-			PokemonAtacacado.healthPoint = (int) (PokemonAtacacado.healthPoint - this.fuerzaDeAtaque * 0.5);
-		} else if (PokemonAtacacado instanceof PokemonHada) {
-			PokemonAtacacado.healthPoint = PokemonAtacacado.healthPoint - this.fuerzaDeAtaque * 2;
-		} else if (PokemonAtacacado instanceof PokemonHielo) {
-			PokemonAtacacado.healthPoint = PokemonAtacacado.healthPoint - this.fuerzaDeAtaque * 2;
-		} else if (PokemonAtacacado instanceof PokemonLucha) {
-			PokemonAtacacado.healthPoint = PokemonAtacacado.healthPoint - this.fuerzaDeAtaque;
-		} else if (PokemonAtacacado instanceof Pokemon) {
-			PokemonAtacacado.healthPoint = PokemonAtacacado.healthPoint - this.fuerzaDeAtaque;
-		} else if (PokemonAtacacado instanceof PokemonPlanta) {
-			PokemonAtacacado.healthPoint = PokemonAtacacado.healthPoint - this.fuerzaDeAtaque;
-		} else if (PokemonAtacacado instanceof PokemonPsiquico) {
-			PokemonAtacacado.healthPoint = PokemonAtacacado.healthPoint - this.fuerzaDeAtaque;
-		} else if (PokemonAtacacado instanceof PokemonRoca) {
-			PokemonAtacacado.healthPoint = PokemonAtacacado.healthPoint - this.fuerzaDeAtaque * 2;
-		} else if (PokemonAtacacado instanceof PokemonSiniestro) {
-			PokemonAtacacado.healthPoint = PokemonAtacacado.healthPoint - this.fuerzaDeAtaque;
-		} else if (PokemonAtacacado instanceof PokemonTierra) {
-			PokemonAtacacado.healthPoint = PokemonAtacacado.healthPoint - this.fuerzaDeAtaque;
-		} else if (PokemonAtacacado instanceof PokemonVeneno) {
-			PokemonAtacacado.healthPoint = PokemonAtacacado.healthPoint - this.fuerzaDeAtaque;
-		} else if (PokemonAtacacado instanceof PokemonVolador) {
-			PokemonAtacacado.healthPoint = PokemonAtacacado.healthPoint - this.fuerzaDeAtaque;
+	public void atacar(Pokemon pokemonAtacacado) {
+		if (pokemonAtacacado instanceof PokemonAcero) {
+			pokemonAtacacado.healthPoint = (int) (pokemonAtacacado.healthPoint - this.fuerzaDeAtaque * 0.5);
+        } else if (pokemonAtacacado instanceof PokemonAgua) {
+        	pokemonAtacacado.healthPoint = (int) (pokemonAtacacado.healthPoint - this.fuerzaDeAtaque * 0.5);
+        } else if (pokemonAtacacado instanceof PokemonBicho) {
+        	pokemonAtacacado.healthPoint = pokemonAtacacado.healthPoint - this.fuerzaDeAtaque;
+		} else if (pokemonAtacacado instanceof PokemonDragon) {
+			pokemonAtacacado.healthPoint = pokemonAtacacado.healthPoint - this.fuerzaDeAtaque;
+		} else if (pokemonAtacacado instanceof PokemonElectrico) {
+			pokemonAtacacado.healthPoint = (int) (pokemonAtacacado.healthPoint - this.fuerzaDeAtaque * 0.5);
+		} else if (pokemonAtacacado instanceof PokemonFantasma) {
+			pokemonAtacacado.healthPoint = pokemonAtacacado.healthPoint - this.fuerzaDeAtaque;
+		} else if (pokemonAtacacado instanceof PokemonFuego) {
+			pokemonAtacacado.healthPoint = (int) (pokemonAtacacado.healthPoint - this.fuerzaDeAtaque * 0.5);
+		} else if (pokemonAtacacado instanceof PokemonHada) {
+			pokemonAtacacado.healthPoint = pokemonAtacacado.healthPoint - this.fuerzaDeAtaque * 2;
+		} else if (pokemonAtacacado instanceof PokemonHielo) {
+			pokemonAtacacado.healthPoint = pokemonAtacacado.healthPoint - this.fuerzaDeAtaque * 2;
+		} else if (pokemonAtacacado instanceof PokemonLucha) {
+			pokemonAtacacado.healthPoint = pokemonAtacacado.healthPoint - this.fuerzaDeAtaque;
+		} else if (pokemonAtacacado instanceof Pokemon) {
+			pokemonAtacacado.healthPoint = pokemonAtacacado.healthPoint - this.fuerzaDeAtaque;
+		} else if (pokemonAtacacado instanceof PokemonPlanta) {
+			pokemonAtacacado.healthPoint = pokemonAtacacado.healthPoint - this.fuerzaDeAtaque;
+		} else if (pokemonAtacacado instanceof PokemonPsiquico) {
+			pokemonAtacacado.healthPoint = pokemonAtacacado.healthPoint - this.fuerzaDeAtaque;
+		} else if (pokemonAtacacado instanceof PokemonRoca) {
+			pokemonAtacacado.healthPoint = pokemonAtacacado.healthPoint - this.fuerzaDeAtaque * 2;
+		} else if (pokemonAtacacado instanceof PokemonSiniestro) {
+			pokemonAtacacado.healthPoint = pokemonAtacacado.healthPoint - this.fuerzaDeAtaque;
+		} else if (pokemonAtacacado instanceof PokemonTierra) {
+			pokemonAtacacado.healthPoint = pokemonAtacacado.healthPoint - this.fuerzaDeAtaque;
+		} else if (pokemonAtacacado instanceof PokemonVeneno) {
+			pokemonAtacacado.healthPoint = pokemonAtacacado.healthPoint - this.fuerzaDeAtaque;
+		} else if (pokemonAtacacado instanceof PokemonVolador) {
+			pokemonAtacacado.healthPoint = pokemonAtacacado.healthPoint - this.fuerzaDeAtaque;
 		}
 	}
 }

@@ -1,7 +1,6 @@
 package Pokemon;
 
 public class PokemonDragon extends Pokemon {
-	
     public PokemonDragon(String nombre, int healthPoint, int fuerzaDeAtaque) {
         super(nombre, healthPoint, fuerzaDeAtaque);
     }
