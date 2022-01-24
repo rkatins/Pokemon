@@ -1,7 +1,7 @@
 package Pokemon;
 
 public class Pokemon {
-	protected int idPokedex;
+	protected String idPokedex;
 	protected String nombre;
 	protected int healthPoint;
 	protected int fuerzaDeAtaque;
@@ -15,7 +15,7 @@ public class Pokemon {
 		this.fuerzaDeAtaque = fuerzaDeAtaque;
 	}
 
-	public Pokemon(int idPokedex, String nombre, int healthPoint, int fuerzaDeAtaque, int defensa, int velocidad, int fuerzaDeAtaqueEspecial) {
+	public Pokemon(String idPokedex, String nombre, int healthPoint, int fuerzaDeAtaque, int defensa, int velocidad, int fuerzaDeAtaqueEspecial) {
 		this.idPokedex = idPokedex;
 		this.nombre = nombre;
 		this.healthPoint = healthPoint;
@@ -24,9 +24,7 @@ public class Pokemon {
 		this.velocidad = velocidad;
 		this.fuerzaDeAtaqueEspecial = fuerzaDeAtaqueEspecial;
 	}
-
-
-
+	
 	public String getNombre() {
 		return nombre;
 	}
