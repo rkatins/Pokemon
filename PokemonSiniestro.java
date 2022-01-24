@@ -5,7 +5,7 @@ public class PokemonSiniestro extends Pokemon{
         super(nombre, healthPoint, fuerzaDeAtaque);
     }
 
-	public PokemonSiniestro(int idPokedex, String nombre, int healthPoint, int fuerzaDeAtaque, int defensa, int velocidad, int fuerzaDeAtaqueEspecial) {
+	public PokemonSiniestro(String idPokedex, String nombre, int healthPoint, int fuerzaDeAtaque, int defensa, int velocidad, int fuerzaDeAtaqueEspecial) {
 		super(idPokedex, nombre, healthPoint, fuerzaDeAtaque, defensa, velocidad, fuerzaDeAtaqueEspecial);
 	}
 	

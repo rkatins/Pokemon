@@ -5,7 +5,7 @@ public class PokemonPsiquico extends Pokemon {
         super(nombre, healthPoint, fuerzaDeAtaque);
     }
 
-	public PokemonPsiquico(int idPokedex, String nombre, int healthPoint, int fuerzaDeAtaque, int defensa, int velocidad, int fuerzaDeAtaqueEspecial) {
+	public PokemonPsiquico(String idPokedex, String nombre, int healthPoint, int fuerzaDeAtaque, int defensa, int velocidad, int fuerzaDeAtaqueEspecial) {
 		super(idPokedex, nombre, healthPoint, fuerzaDeAtaque, defensa, velocidad, fuerzaDeAtaqueEspecial);
 	}
 	
